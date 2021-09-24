@@ -1,3 +1,3 @@
-module RavMeserApiV2
+module RavMeserV2
   VERSION = "0.1.0"
 end
