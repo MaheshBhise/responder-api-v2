@@ -6,7 +6,7 @@ module RavMeserV2
         {
           name: "schooler webhook - #{Random.hex(4)}", 
           webhooks_send_type_id: 2, 
-          events: [1,2], 
+          events: [1,2,5], 
           merges: {email: "email",phone: "phone",name: "name"}
         }
       )
