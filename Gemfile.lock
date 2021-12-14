@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rav_meser_v2 (0.1.0)
+    rav_meser_v2 (0.1.1)
       httparty (~> 0.18.1)
       json (~> 2.5.1)
       uri (~> 0.10.1)
