@@ -7,5 +7,9 @@ module RavMeserV2
     def create_subscriber(list_id, query_params = {})
       send_request(:post, "/subscribers", query_params.merge({list_ids: [list_id]}))
     end
+
+    def update_subscriber(subscriber_id, query_params = {})
+      send_request(:patch, "/subscribers/#{subscriber_id}", query_params)
+    end
   end
 end
