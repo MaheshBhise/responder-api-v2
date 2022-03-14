@@ -9,7 +9,7 @@ module RavMeserV2
     end
 
     def update_subscriber(subscriber_id, query_params = {})
-      send_request(:patch, "/subscribers/#{subscriber_id}", query_params)
+      send_request(:put, "/subscribers/#{subscriber_id}", query_params)
     end
   end
 end
