@@ -7,6 +7,7 @@ module RavMeserV2
     include Subscriber
     include Webhook
     include Tag
+    include PersonalField
 
     RAV_MESER_ENDPOINT = 'https://graph.responder.live/v2/'
 
