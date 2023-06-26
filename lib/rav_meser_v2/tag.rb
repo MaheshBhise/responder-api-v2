@@ -4,8 +4,8 @@ module RavMeserV2
       send_request(:get, "/tag", query_params)
     end
 
-    def create_subscriber_tag(query_params = {})
-      send_request(:post, "/tags/subscribers", query_params)
+    def create_subscriber_tag(body_params = {})
+      send_request(:post, "/tags/subscribers", body_params)
     end
 
     def get_subscriber_tags(query_params = {})

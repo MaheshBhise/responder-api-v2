@@ -28,7 +28,7 @@ module RavMeserV2
 
     private
 
-    def send_request(type, url, params = {})
+    def send_request(type, url, params = {}, query_params = {})
       request_params = { 
         headers: { 'Authorization' => "Bearer #{access_token}", 'Content-Type' => 'application/json'},
         base_uri: endpoint,
@@ -41,6 +41,8 @@ module RavMeserV2
         else
           request_params.merge!({ body: params.to_json })
         end
+
+      request_params.merge!(query: query_params) if query_params.present?
   
       response = self.class.send(type, url, request_params)
       begin

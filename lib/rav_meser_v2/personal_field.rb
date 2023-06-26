@@ -8,8 +8,8 @@ module RavMeserV2
       end
     end
 
-    def create_personal_field(list_id, query_params = {})
-      send_request(:post, "/personal-fields", query_params.merge({list_id: list_id}))
+    def create_personal_field(list_id, body_params = {})
+      send_request(:post, "/personal-fields", body_params.merge({list_id: list_id}))
     end
 
     def update_personal_field(field_id, query_params = {})

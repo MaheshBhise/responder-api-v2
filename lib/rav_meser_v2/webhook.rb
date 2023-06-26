@@ -1,8 +1,8 @@
 module RavMeserV2
   module Webhook
-    def create_webhook(list_id, query_params = {})
-      query_params.merge!({list_id: list_id, url: query_params[:url]})
-      query_params.merge!(
+    def create_webhook(list_id, body_params = {})
+      body_params.merge!({list_id: list_id, url: body_params[:url]})
+      body_params.merge!(
         {
           name: "schooler webhook - #{Random.hex(4)}", 
           webhooks_send_type_id: 2, 
@@ -10,7 +10,7 @@ module RavMeserV2
           merges: {email: "email",phone: "phone",name: "name"}
         }
       )
-      send_request(:post, "/webhooks", query_params)
+      send_request(:post, "/webhooks", body_params)
     end
 
     def delete_webhook(webhook_id, query_params = {})
